@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('weapons', function (Blueprint $table) {
+        Schema::create('armors', function (Blueprint $table) {
             //*info
             $table->id();
             $table->string('name');
@@ -35,18 +35,21 @@ return new class extends Migration
             $table->integer('base luck increment')->default(0);
 
             //*FK-armor_tipoloogy
-            $table->foreignId('weapon_tipology_id')->constrained()->onDelete('cascade');
+            $table->foreignId('armor_tipology_id')->constrained()->onDelete('cascade');
 
             //*FK-armor_set
             $table->foreignId('set_id')->constrained()->onDelete('cascade');
+
+            $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('weapons');
+        Schema::dropIfExists('armors');
     }
 };

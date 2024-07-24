@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Character;
-use App\Models\WeaponTipology;
+use App\Models\ArmorTipology;
 use App\Models\Set;
 
-class Weapon extends Model
+class Armor extends Model
 {
     use HasFactory;
 
@@ -18,9 +18,9 @@ class Weapon extends Model
         return $this->belongsToMany(Character::class);
     }
 
-    public function weapons()
+    public function armorsTipologies()
     {
-        return $this->belongsTo(WeaponTipology::class);
+        return $this->belongsTo(ArmorTipology::class);
     }
 
     public function sets()

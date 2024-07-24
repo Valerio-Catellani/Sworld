@@ -23,11 +23,12 @@ return new class extends Migration
             $table->text('description')->nullable();
             //$table->string('race')
             //&$table->string('weapons')
-            //$table->string('armors')
+            //&$table->string('armors')
             //$table->string('talents')
             $table->integer('level')->default(1);
             $table->integer('exp')->default(0);
             $table->integer('gold coins')->default(0);
+
             $table->integer('base life')->default(35);
             $table->integer('base strength')->default(10);
             $table->integer('base intelligence')->default(10);;

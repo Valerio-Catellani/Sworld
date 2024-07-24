@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\User;
 use App\Models\Weapon;
+use App\Models\Armor;
 
 class Character extends Model
 {
@@ -20,5 +21,10 @@ class Character extends Model
     public function weapons()
     {
         return $this->belongsToMany(Weapon::class);
+    }
+
+    public function armors()
+    {
+        return $this->belongsToMany(Armor::class);
     }
 }

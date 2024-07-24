@@ -20,7 +20,6 @@ return new class extends Migration
             $table->integer('upgrade')->default(0);
             $table->integer('attack increment')->default(1);
             $table->integer('defense increment')->default(0);
-            $table->integer('speed increment')->default(0);
             $table->integer('value custom')->default(0);
             $table->timestamps();
         });
